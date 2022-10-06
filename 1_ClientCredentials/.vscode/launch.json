@@ -1,0 +1,75 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Use IntelliSense to find out which attributes exist for C# debugging
+      // Use hover for the description of the existing attributes
+      // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+      "name": ".NET Core Launch (web) IdentityServer",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_identityserver",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/src/IdentityServer/bin/Debug/net6.0/IdentityServer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/IdentityServer",
+      "stopAtEntry": false,
+      // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      // Use IntelliSense to find out which attributes exist for C# debugging
+      // Use hover for the description of the existing attributes
+      // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+      "name": ".NET Core Launch (web) Api",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_api",
+      // If you have changed target frameworks, make sure to update the program path.
+      "program": "${workspaceFolder}/src/Api/bin/Debug/net6.0/Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Api",
+      "stopAtEntry": false,
+      // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET Core Launch (console) Client",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_client",
+      "program": "${workspaceFolder}/src/Client/bin/Debug/net6.0/Client.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run All",
+      "configurations": [
+        ".NET Core Launch (web) IdentityServer",
+        ".NET Core Launch (web) Api"
+      ]
+    }
+  ]
+}
