@@ -10,9 +10,9 @@
       "request": "launch",
       "preLaunchTask": "build_identityserver",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/src/IdentityServer/bin/Debug/net6.0/IdentityServer.dll",
+      "program": "${workspaceFolder}/src/IdentityServerAspNetIdentity/bin/Debug/net6.0/IdentityServerAspNetIdentity.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/src/IdentityServer",
+      "cwd": "${workspaceFolder}/src/IdentityServerAspNetIdentity",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
