@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script src="oidc-client-ts.js"></script>
+    <script>
+
+        new oidc.UserManager({ authority: "https://localhost:5001", client_id: "js", response_mode: "query" }).signinRedirectCallback().then(function () {
+            window.location = "index.html";
+        }).catch(function (e) {
+            console.error(e);
+        });
+    </script>
+</body>
+</html>
